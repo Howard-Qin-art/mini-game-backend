@@ -1,8 +1,6 @@
 [build]
-builder = "docker"
+builder = "maven"
+buildCommand = "mvn clean package -DskipTests"
 
 [deploy]
-startCommand = "java -jar app.jar"
-
-[vars]
-PORT = "8080"
+startCommand = "java -jar target/mini-game-backend-1.0.0.jar"
