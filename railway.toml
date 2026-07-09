@@ -1,5 +1,8 @@
 [build]
-builder = "maven"
+builder = "docker"
 
 [deploy]
-startCommand = "java -jar target/mini-game-backend-1.0.0.jar"
+startCommand = "java -jar app.jar"
+
+[vars]
+PORT = "8080"
